@@ -382,7 +382,7 @@ $config = array (
 				'map_meta_cap' => true,
 				'hierarchical' => true,
 				'menu_position' => null,
-				'supports' => array('title', 'editor', 'author', 'revisions', 'comments', 'page-attributes'),
+				'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'author', 'revisions', 'comments', 'page-attributes'),
 				'rewrite' => array('slug' => __('lesson', 'academy')),
 			),
 			
