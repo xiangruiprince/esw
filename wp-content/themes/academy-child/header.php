@@ -142,7 +142,7 @@
 				<?php get_template_part('module', 'course'); ?>
 			<?php } else { ?>
 				<div class="page-title">
-					<h1 class="nomargin"><?php ThemexInterface::renderPageTitle(); ?></h1>
+					<h1 class="nomargin"><?php the_title(); ?></h1>
 				</div>
 				<!-- /page title -->				
 			<?php } ?>
