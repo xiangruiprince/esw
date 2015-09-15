@@ -26,13 +26,4 @@
 		</div>
 		<?php } ?>
 	</div>
-	<?php if(!empty(ThemexLesson::$data['attachments'])) { ?>
-	<div class="lesson-attachments">
-		<?php foreach(ThemexLesson::$data['attachments'] as $attachment) { ?>
-		<a href="<?php echo $attachment['redirect']; ?>" target="_blank" title="<?php echo $attachment['title']; ?>" class="<?php echo $attachment['type']; ?> <?php if(ThemexLesson::$data['status']=='free') { ?>disabled<?php } ?>"></a>
-		<?php } ?>
-	</div>
-	<?php } else { ?>
-	<div class="lesson-title"></div>
-	<?php } ?>
 </div>

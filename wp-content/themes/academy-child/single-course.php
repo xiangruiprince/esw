@@ -8,13 +8,11 @@
 		<?php if(!empty(ThemexCourse::$data['lessons'])) { ?>
 		<h2><?php _e('課程列表', 'academy'); ?></h2>
 
-		<!-- No need to show course progress
 		<?php if(ThemexCourse::isMember()) { ?>
 		<div class="course-progress">
 			<span style="width:<?php echo ThemexCourse::$data['progress']; ?>%;"></span>
 		</div>
 		<?php } ?>
-		-->
 
 		<div class="lessons-listing clearfix">
 		<?php 
