@@ -150,5 +150,9 @@
 		<?php } ?>		
 		</div>
 		<!-- /featured -->
-		<div class="main-content">
+		<?php if(is_front_page() && is_page()) { ?>
+			<div class="main-content home">
+		<?php } else { ?>
+			<div class="main-content">
+		<?php } ?>
 			<div class="row">

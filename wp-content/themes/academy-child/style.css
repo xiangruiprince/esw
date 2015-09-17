@@ -11,3 +11,7 @@ Version: 2.10
 body {
    font-size:16px;
 }
+
+.main-content.home {
+   padding-bottom:0px;
+}
