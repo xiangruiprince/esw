@@ -1,4 +1,10 @@
 <?php 
+
+if ( !is_user_logged_in() && in_category('16') ) {
+	wp_redirect(home_url());
+	exit;
+}
+
 get_header(); 
 
 $layout=ThemexCore::getOption('posts_layout', 'right');
@@ -24,7 +30,7 @@ if($layout=='left') {
 		<?php } ?>
 		<div class="post-content">
 			<?php the_content(); ?>
-			<?php if (in_category('case-studies')) { ?>
+			<?php if (in_category(16)) { ?>
 				<hr/>
 				<!-- TradingView Widget BEGIN -->
 				<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>

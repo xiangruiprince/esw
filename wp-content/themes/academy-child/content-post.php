@@ -1,5 +1,4 @@
 <article <?php post_class('post clearfix'); ?>>
-			<h1>akudkauhdka</h1>
 	<?php if(has_post_thumbnail()) { ?>
 	<div class="column fivecol post-image">
 		<div class="bordered-image thick-border">
