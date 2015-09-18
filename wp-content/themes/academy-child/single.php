@@ -24,6 +24,7 @@ if($layout=='left') {
 		<?php } ?>
 		<div class="post-content">
 			<?php the_content(); ?>
+			<?php if (in_category('case-studies')) { ?>
 				<hr/>
 				<!-- TradingView Widget BEGIN -->
 				<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
@@ -46,11 +47,13 @@ if($layout=='left') {
 				});
 				</script>
 				<!-- TradingView Widget END -->
-			<hr/>
-			<h2>Case Study Explanation</h2>
-			<div class="explanation">
-				<?php echo get_field('explanation'); ?>
-			</div>
+				<hr/>
+				<h2>Case Study Explanation</h2>
+				<div class="explanation">
+					<?php echo get_field('case-study_explanation'); ?>
+				</div>
+				<!-- /Case Study content -->
+			<?php } ?>
 			<hr/>
 			<footer class="post-footer">
 				<div class="sixcol column">
@@ -75,7 +78,25 @@ if($layout=='left') {
 </div>
 <?php if($layout=='right') { ?>
 <aside class="sidebar column fourcol last">
-<?php get_sidebar(); ?>
+<?php if (in_category('case-studies')) { ?>
+	<?php if (get_field('case-study_file-link')) { ?>
+		<div class="widget">
+			<div class="widget-title">
+				<h4 class="nomargin"><?php _e('Attachments', 'academy'); ?></h4>
+			</div>
+			<div class="widget-content">
+				<ul class="styled-list style-4">
+					<li class="document">
+						<a href="<?=get_field('case-study_file-link'); ?>">
+							<?=get_field('case-study_file-name') == true ?  get_field('case-study_file-name') : '案例附件'?>
+						</a>
+					</li>
+			</div>
+		</div>
+	<?php } ?>
+<?php } else { 
+	get_sidebar();
+} ?>
 </aside>
 <?php } ?>
 <?php get_footer(); ?>
