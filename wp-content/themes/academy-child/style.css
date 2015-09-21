@@ -8,6 +8,11 @@ Author URI: http://www.themeforest.net/user/themex/
 Version: 2.10
 */
 
+
+/* 
+ * Reset 
+ */
+
 body {
    font-size:16px;
 }
@@ -15,3 +20,302 @@ body {
 .main-content.home {
    padding-bottom:0px;
 }
+
+textarea, input[type="submit"], input[type="button"], input[type="text"], input[type="email"], input[type="number"], input[type="password"], .course-preview, .course-description, .course-image, .course-preview .course-meta, .popup .popup-text, .boxed-slider, .tooltip-text, .bordered-image, .wp-caption, .gallery-icon, ul.products li.product img, .widget ul.product_list_widget li img, .content-block, .lessons-listing, .user-courses-listing, .toggles-wrap, .vertical-tabs .tabs li, .widget, .user-menu, .tooltip-text .field-wrap, .certificate-wrap, .jp-volume-bar, .jp-progress, .jp-controls a, .jp-controls a:before, .jp-video-play-icon, .jp-video-play-icon:before, .jp-gui, .faq-toggles, .course-progress, .course-progress span, .product-preview, .search-form, .mobile-search-form, .tagcloud a, .user-links a, .users-listing .user-image, .pagination span, .element-button, .element-button:after, .button-wrap, .select-element, .header-navigation ul, .header-navigation div > ul > li a, .woocommerce .woocommerce-error, .woocommerce .woocommerce-info, .woocommerce .woocommerce-message {
+	border-radius: 8px;
+}
+
+.element-button:after {
+	background: none;
+}
+
+.woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit, .woocommerce #content input.button, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce-page #respond input#submit, .woocommerce-page #content input.button, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce #respond input#submit:hover, .woocommerce #content input.button:hover, .woocommerce-page a.button:hover, .woocommerce-page button.button:hover, .woocommerce-page input.button:hover, .woocommerce-page #respond input#submit:hover, .woocommerce-page #content input.button:hover
+ .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page #content input.button.alt, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce #content input.button.alt:hover, .woocommerce-page a.button.alt:hover, .woocommerce-page button.button.alt:hover, .woocommerce-page input.button.alt:hover, .woocommerce-page #respond input#submit.alt:hover, .woocommerce-page #content input.button.alt:hover, input[type="submit"], input[type="button"], .course-price .price-text, .jp-play-bar, .jp-volume-bar-value, .jp-controls a:before, .search-form input, .select-menu span, .element-button {
+ 	background-image: none!important;
+ }
+
+
+ .share-button, .login-options .button-wrap, .jp-controls a:after, .jp-controls a, .login-button .tooltip-text .field-wrap, .select-menu, .mobile-search-form, .search-form {
+ 	-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+ }
+
+.element-button.dark {
+	border-color: transparent;
+}
+
+.element-button.dark:after {
+	background: none;
+}
+
+.element-button.dark2 {
+	background-color: #226CC2!important;
+}
+
+input[type="submit"], input[type="button"], .element-button {
+	text-shadow: none;
+	font-size: 14px;
+	border: 0px;
+}
+
+.align-row {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.vertical-align {
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    display: flex;
+    align-items: center;
+}
+
+/* 
+ * Navitation 
+ */
+
+.jp-interface, .widget-title, .site-header, .site-footer {
+	background-image: none;
+}
+
+.site-header {
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+
+.header-options {
+	margin-top: 12px;
+}
+
+.header-navigation {
+	margin-top: 10px;
+}
+
+.header-navigation ul {
+	margin-top: 0.7em;
+}
+
+.header-navigation div > ul > li {
+	font-size: 14px;
+}
+
+.login-options .button-wrap {
+	border: 0px;
+}
+
+.button-icon.register, .button-icon.login, .button-icon.logout {
+	width: 0px;
+	height: 0px;
+	display: none;
+}
+
+.login-button .element-button, .register-button .element-button, .logout-button .element-button, .myprofile-button .element-button {
+	padding: 5px 35px;
+}
+
+/*
+ *  Home
+ */
+ .parallax-slider > ul > li {
+ 	height: 480px;
+ }
+
+ .parallax-slider .row {
+ 	height: 100%;
+ }
+
+ .parallax-slider .row .vertical-align{
+ 	text-align: center;
+ }
+
+.parallax-slider .parallax-container {
+	width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+.parallax-slider .element-button.medium {
+	padding-left: 35px;
+	padding-right: 35px;
+}
+
+.course-total {
+	display: inline-block;
+    margin-bottom: 0px;
+    margin-right: 20px;
+}
+
+.home-banner {
+	background: #494949;
+	text-align: center;
+	color: #ffffff;
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.home-banner img {
+	margin-bottom: 15px;
+}
+
+.home-banner h4 {
+	color: #4A90E2;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.home-banner p {
+	font-size: 15px;
+}
+
+.course-total-container {
+	margin-top: 80px;
+}
+
+
+/*
+ * Course Page
+ */
+.course-description.widget.premium-course {
+	background: transparent;
+	border: 0px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	color: #ffffff;
+}
+
+.single-course .featured-content {
+	padding: 1.5em 0;
+}
+
+.featured-content .premium-course.course-description h1 {
+	color: #ffffff;
+	font-size: 40px;
+}
+
+.featured-content .premium-course.course-description h4 {
+	color: #9DC0E8;
+	font-size: 18px;
+	border-bottom: 1px solid #8F8F8F;
+	padding-bottom: 3px;
+}
+
+.featured-content .premium-course.course-description ul li {
+	margin-bottom: 0px;
+}
+
+.course-description .course-footer .element-button {
+	font-size: 16px;
+	padding: 0px 35px;
+}
+
+.element-button.takecourse-button {
+	background-color: #4A90E2;
+}
+
+.myprofile-button .element-button {
+	background-color: #226CC2!important;
+}
+
+.course-content .lesson-header {
+	font-size: 20px;
+	color: #226CC2;
+	margin-bottom: 5px;
+}
+
+.lessons-listing {
+	background: transparent;
+	-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 0px;
+}
+
+.course-image {
+	border: 1px solid #226CC2;
+    border-radius: 0px;
+    padding: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 15px;
+}
+
+.course-image a {
+	font-size: 0px;
+}
+
+.lessons-listing h3 a {
+	color: #226CC2;
+	font-size: 20px;
+}
+
+.course-excerpt {
+	height: 75px;
+	overflow: hidden;
+}
+
+.lesson-item .course-name {
+	height: 62px;
+	margin-bottom: 5px!important;
+}
+
+.lesson-item .element-button.small {
+	padding: 5px 35px;
+} 
+
+#course-stock-footer {
+    background: url('../academy/images/bgs/stock-bg.jpg');
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 75px;
+}
+
+#course-stock-footer .content-container {
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+    text-align: center;
+    max-width: 500px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#course-stock-footer .content-container .content-title{
+    font-size: 48px;
+}
+
+.content-button {
+	padding: 5px 60px;
+}
+
+#course-stock-footer .content-container .content-body {
+	margin-bottom: 20px;
+}
+
+/*
+ * Lesson 
+ */
+ .lesson-content h2 {
+ 	color: #226CC2;
+ 	font-size: 20px;
+ }
+
+ .sidebar .widget {
+ 	-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0px;
+ }
+
+ ul.styled-list.style-4 li.document:before {
+ 	margin-top: 2px;
+ }
+
+ .post-categories {
+ 	margin-left: 5px;
+ }

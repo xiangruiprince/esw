@@ -13,7 +13,7 @@ if($layout=='left') {
 </aside>
 <div class="column eightcol last">
 <?php } else { ?>
-<div class="column eightcol">
+<div class="column eightcol lesson-content">
 <?php } ?>
 	<?php 
 	if(ThemexLesson::$data['prerequisite']['progress']==0 && ThemexLesson::$data['status']!='free' && ThemexCore::checkOption('lesson_hide') && !ThemexCourse::isAuthor()) {

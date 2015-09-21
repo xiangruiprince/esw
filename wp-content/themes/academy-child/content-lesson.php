@@ -10,12 +10,12 @@
 			<a href="<?php echo get_permalink(ThemexLesson::$data['ID']); ?>"> <?php echo get_the_post_thumbnail(ThemexLesson::$data['ID'], array(420,420)); ?></a>
 		</div>
 
-		<h3 class="nomargin"><a href="<?php echo get_permalink(ThemexLesson::$data['ID']); ?>" class="<?php if(ThemexLesson::$data['status']=='free') { ?>disabled<?php } ?>"><?php echo get_the_title(ThemexLesson::$data['ID']); ?></a></h3>
+		<h3 class="course-name nomargin"><a href="<?php echo get_permalink(ThemexLesson::$data['ID']); ?>" class="<?php if(ThemexLesson::$data['status']=='free') { ?>disabled<?php } ?>"><?php echo get_the_title(ThemexLesson::$data['ID']); ?></a></h3>
 		
 		<?php if ( has_excerpt( ThemexLesson::$data['ID'] ) ) { ?>
-		<p><?php echo nectary_get_the_excerpt(ThemexLesson::$data['ID']); ?></p>
+		<p class="course-excerpt"><?php echo nectary_get_the_excerpt(ThemexLesson::$data['ID']); ?></p>
 		<?php } else { ?>
-		<p>Bla bla bla</p>
+		<p class="course-excerpt">&nbsp;</p>
 		<?php } ?>
 
 		<?php echo do_shortcode ('[button color="primary" size="small" url="' . get_permalink(ThemexLesson::$data['ID']) .  '" target="self"]進入課程[/button]'); ?>

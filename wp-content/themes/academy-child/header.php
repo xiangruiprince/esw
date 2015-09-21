@@ -25,19 +25,19 @@
 					<div class="header-options right clearfix">					
 						<div class="login-options right">
 						<?php if(is_user_logged_in()) { ?>
-							<div class="button-wrap left">
-								<a href="<?php echo wp_logout_url(SITE_URL); ?>" class="element-button dark">
+							<div class="button-wrap left logout-button">
+								<a href="<?php echo wp_logout_url(SITE_URL); ?>" class="element-button dark dark2">
 									<span class="button-icon logout"></span><?php _e('Sign Out','academy'); ?>
 								</a>							
 							</div>
-							<div class="button-wrap left">
+							<div class="button-wrap left myprofile-button">
 								<a href="<?php echo ThemexUser::$data['user']['profile_url']; ?>" class="element-button">
 									<span class="button-icon register"></span><?php _e('My Profile','academy'); ?>
 								</a>						
 							</div>							
 							<?php } else { ?>						
 							<div class="button-wrap left tooltip login-button">
-								<a href="#" class="element-button dark"><span class="button-icon login"></span><?php _e('Sign In','academy'); ?></a>
+								<a href="#" class="element-button dark dark2"><span class="button-icon login"></span><?php _e('Sign In','academy'); ?></a>
 								<div class="tooltip-wrap">
 									<div class="tooltip-text">
 										<form action="<?php echo AJAX_URL; ?>" class="ajax-form popup-form" method="POST">
@@ -88,7 +88,7 @@
 								</div>
 							</div>
 							<?php if(get_option('users_can_register')) { ?>
-							<div class="button-wrap left">
+							<div class="button-wrap left register-button">
 								<a href="<?php echo ThemexCore::getURL('register'); ?>" class="element-button">
 									<span class="button-icon register"></span><?php _e('Register','academy'); ?>
 								</a>
@@ -97,10 +97,6 @@
 						<?php } ?>
 						</div>
 						<!-- /login options -->										
-						<div class="search-form right">
-							<?php get_search_form(); ?>
-						</div>
-						<!-- /search form -->
 						<?php if($code=ThemexCore::getOption('sharing')) { ?>
 						<div class="button-wrap share-button tooltip right">
 							<a href="#" class="element-button dark"><span class="button-icon plus nomargin"></span></a>

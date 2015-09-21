@@ -4,8 +4,6 @@
 						<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('footer')); ?>
 					</div>
 				<?php } ?>
-				</div>
-			</div>
 			<!-- /content -->
 			<div class="footer-wrap">
 				<footer class="site-footer">

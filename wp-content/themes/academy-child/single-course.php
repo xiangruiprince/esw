@@ -6,25 +6,27 @@
 	<div class="fullwidth-section">
 	<?php } ?>
 		<?php if(!empty(ThemexCourse::$data['lessons'])) { ?>
-		<h2><?php _e('Lessons', 'academy'); ?></h2>
+		<h2 class="lesson-header"><?php _e('Lessons', 'academy'); ?></h2>
 
 		<div class="lessons-listing clearfix">
-		<?php 
-			$counter=0; 
-			foreach(ThemexCourse::$data['lessons'] as $index=>$lesson) { 
-				$counter++;
-		?>
-			<div class="column threecol <?php echo $counter==4 ? 'last':''; ?>">
-				<?php get_template_part('content', 'lesson'); ?>
+			<div class="align-row">
+				<?php 
+					$counter=0; 
+					foreach(ThemexCourse::$data['lessons'] as $index=>$lesson) { 
+						$counter++;
+				?>
+					<div class="column threecol <?php echo $counter==4 ? 'last':''; ?>">
+						<?php get_template_part('content', 'lesson'); ?>
+					</div>
+					<?php 
+						if ($counter==4) { 
+						$counter = 0;
+						echo '<div class="clear"></div>';
+						}
+					} ?>
+				</div>
+				<?php } ?>
 			</div>
-			<?php 
-				if ($counter==4) { 
-				$counter = 0;
-				echo '<div class="clear"></div>';
-				}
-			} ?>
-		</div>
-		<?php } ?>
 	</div>
 	<?php if(!empty(ThemexCourse::$data['questions'])) { ?>
 	<div class="course-questions fivecol column last">	
@@ -49,4 +51,14 @@
 	<?php } ?>
 </div>
 <!-- /course content -->
+
+</div></div>
+
+<div id="course-stock-footer" class="vertical-align">
+	<div class="content-container">
+          <div class="content-title">外匯線上教學</div>
+          <div class="content-body">如果你是新的網上外匯交易，你會發現，95％的交易商迅速失去而失去。為了贏得在貨幣交易，你需要正確的外匯教學。</div>
+          <div><a href="#"class="element-button small primary content-button">註冊</a></div>
+    </div>
+</div>
 <?php get_footer(); ?>
