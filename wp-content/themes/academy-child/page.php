@@ -2,6 +2,61 @@
 <?php the_post(); ?>
 <?php the_content(); ?>
 <?php if(is_front_page() && is_page()) { ?>
+		<h2>一共9個課程</h2>
+	<?php 
+
+		$args = array ( 'posts_per_page' => 4, 'post_type' => 'lesson',); 
+		$the_query = new WP_Query($args);
+		if ( $the_query->have_posts() ) : 
+	?>
+
+	<div class="course-content clearfix">
+		<div class="fullwidth-section">
+    		<div class="lessons-listing clearfix">
+    			<div class="align-row">
+
+        			<?php 
+	        			$counter = 0;
+	        			while ( $the_query->have_posts() ) : $the_query->the_post(); $counter++;
+        			?>
+
+        			<div class="column threecol <?php if ($counter==4) { echo " last"; }?> .">
+						<div class="lesson-item">
+							<div class="lesson-title">
+
+								<div class="course-image">
+									<a href="<?php echo get_permalink(ThemexLesson::$data['ID']); ?>"> <?php echo get_the_post_thumbnail(ThemexLesson::$data['ID'], array(420,420)); ?></a>
+								</div>
+
+								<h3 class="course-name nomargin"><a href="<?php echo get_permalink(ThemexLesson::$data['ID']); ?>" class="<?php if(ThemexLesson::$data['status']=='free') { ?>disabled<?php } ?>"><?php echo get_the_title(ThemexLesson::$data['ID']); ?></a></h3>
+								
+								<?php if ( has_excerpt( ThemexLesson::$data['ID'] ) ) { ?>
+								<p class="course-excerpt"><?php echo nectary_get_the_excerpt(ThemexLesson::$data['ID']); ?></p>
+								<?php } else { ?>
+								<p class="course-excerpt">&nbsp;</p>
+								<?php } ?>
+							</div>
+						</div>
+					</div>
+        			<?php endwhile; ?>
+        			<?php wp_reset_postdata(); ?>       
+    			</div>
+			</div>
+   	 	</div>
+	</div>
+    <?php else : ?>
+
+        <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+
+    <?php endif; ?>
+    <div style="text-align:center; padding-bottom:30px;">
+    	<a href="#"class="element-button small primary content-button">進入課程列表</a>
+    </div>
+	<!-- /course content -->
+
+	<div class="clear"></div>
+
+	</div> <!-- /Lesson - preview -->
 	<div class="home-banner">
 		<img class="alignnone size-full wp-image-2273" src="http://localhost/esw/wp-content/uploads/2013/02/icon-collaboration.png" alt="collaboration" width="72" height="49" />
 		<h4>此平台內容是經過與中青集團的合作及許可，才得以呈現在此平台。</h4>

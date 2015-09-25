@@ -272,7 +272,6 @@ input[type="submit"], input[type="button"], .element-button {
     overflow: hidden;
     background-size: cover;
     background-position: center center;
-    margin-bottom: 75px;
 }
 
 #course-stock-footer .content-container {
