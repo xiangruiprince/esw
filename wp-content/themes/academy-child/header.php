@@ -130,22 +130,22 @@
 			<div class="substrate">
 
 			</div>
-			<?php if(is_front_page() && is_page()) { ?>
-			<?php get_template_part('module', 'slider'); ?>
-			<?php } else { ?>
-			<div class="row">
-			<?php if(is_singular('course')) { ?>
-				<?php get_template_part('module', 'course'); ?>
-			<?php } else if(is_singular('lesson') || in_category('16')) { ?>
-				<div class="page-title">
-					<h1 class="nomargin"><?php the_title(); ?></h1>
-				</div>
-			<?php } else { ?>
-				<div class="page-title">
-					<h1 class="nomargin"><?php ThemexInterface::renderPageTitle(); ?></h1>
-				</div>
-				<!-- /page title -->				
-			<?php } ?>
+			<?php if(is_front_page()) { ?>
+				<?php get_template_part('module', 'slider'); ?>
+			<?php } else { ?> 
+				<div class="row">
+					<?php if(is_singular('course')) { ?>
+						<?php get_template_part('module', 'course'); ?>
+					<?php } else if(is_singular('lesson') || is_singular('case')) { ?>
+						<div class="page-title">
+							<h1 class="nomargin"><?php the_title(); ?></h1>
+						</div>
+					<?php } else { ?>
+						<div class="page-title">
+							<h1 class="nomargin"><?php ThemexInterface::renderPageTitle(); ?></h1>
+						</div>
+						<!-- /page title -->				
+					<?php } ?>
 			</div>
 		<?php } ?>		
 		</div>

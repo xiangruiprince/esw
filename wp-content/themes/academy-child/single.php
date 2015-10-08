@@ -1,6 +1,6 @@
 <?php 
 
-if ( !is_user_logged_in() && in_category('16') ) {
+if ( !is_user_logged_in() && get_post_type() == 'case' ) {
 	wp_redirect(home_url());
 	exit;
 }
@@ -30,7 +30,7 @@ if($layout=='left') {
 		<?php } ?>
 		<div class="post-content">
 			<?php the_content(); ?>
-			<?php if (in_category(16)) { ?>
+			<?php if (get_post_type() == 'case') { ?>
 				<hr/>
 				<!-- TradingView Widget BEGIN -->
 				<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
@@ -84,7 +84,7 @@ if($layout=='left') {
 </div>
 <?php if($layout=='right') { ?>
 <aside class="sidebar column fourcol last">
-<?php if (in_category('case-studies')) { ?>
+<?php if (get_post_type() == 'case') { ?>
 	<?php if (get_field('case-study_file-link')) { ?>
 		<div class="widget">
 			<div class="widget-title">
