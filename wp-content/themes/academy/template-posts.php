@@ -6,7 +6,7 @@ Template Name: Posts
 get_header();
 
 $layout=ThemexCore::getOption('posts_layout', 'right');
-if($layout=='left') {
+if($layout=='left') { 
 ?>
 <aside class="sidebar column fourcol">
 	<?php get_sidebar(); ?>
