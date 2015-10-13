@@ -11,7 +11,7 @@ function nectary_get_the_excerpt($post_id) {
   $save_post = $post;
   $post = get_post($post_id);
   $output = get_the_excerpt();
-  $output = wp_trim_words($output, 3, '...');
+  $output = wp_trim_words($output, 40, '...');
   $post = $save_post;
   return $output;
 }
