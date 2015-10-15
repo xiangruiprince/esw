@@ -62,7 +62,11 @@ if($type=='boxed') {
 	<?php while($query->have_posts()) { ?>
 		<?php $query->the_post(); ?>
 		<li>
-			<div class="row"><?php the_content(); ?></div>
+			<div class="row" style="display:-webkit-flex; -webkit-align-items: center; display: flex; align-items: center; justify-content: center;">
+				<div style="text-align: center;">
+					<?php the_content(); ?>
+				</div>
+			</div>
 		</li>
 	<?php } ?>
 	</ul>
