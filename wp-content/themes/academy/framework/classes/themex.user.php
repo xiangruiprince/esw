@@ -361,7 +361,9 @@ class ThemexUser {
 			if(isset($data['user_redirect']) && !empty($data['user_redirect'])) {
 				$redirect=ThemexCore::getURL('redirect', intval($data['user_redirect']));
 			} else {
-				$redirect=get_author_posts_url($user->ID);
+				//$redirect=get_author_posts_url($user->ID);
+				$redirect=get_site_url() ;
+				$redirect.='/course/%E5%A4%96%E5%8C%AF/';
 			}
 			
 			ThemexInterface::$messages[]='<a href="'.$redirect.'" class="redirect"></a>';
