@@ -263,9 +263,11 @@ class ThemexUser {
 					ThemexCore::updateUserMeta($user->ID, 'redirect', intval($data['user_redirect']));
 				}
 				
+				/*
 				if(strpos($message, '%link%')===false) {
 					$message.='Click this link to activate your account %link%';
 				}
+				*/
 
 				$link=ThemexCore::getURL('register');
 				if(intval(substr($link, -1))==1) {
